@@ -1,9 +1,8 @@
 function refFix() {
   var startTime = new Date();
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = ss.getSheets()[0];
-  var lastRow = ss.getLastRow();
-  var lastColumn = ss.getLastColumn();
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var lastRow = sheet.getLastRow();
+  var lastColumn = sheet.getLastColumn();
    
   var taskRange = sheet.getRange(1, 1, lastRow, 1);
   var frozenRange = sheet.getRange(1, 1, 1, lastColumn);
